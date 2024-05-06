@@ -41,5 +41,6 @@ export default {
 
 h1 {
   margin: 30px 0px;
+  font-weight: bold;
 }
 </style>

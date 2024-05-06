@@ -11,7 +11,7 @@ export default {
 
 <template>
   <div
-    class="myCard d-flex flex-column gap-2 align-center justify-content-center p-2"
+    class="myCard d-flex flex-column gap-2 align-items-center justify-content-center p-2"
   >
     <img :src="cardImg" alt="" class="rounded-circle"/>
     <h4 class="fw-bold fs-3">{{ cardName }}</h4>
@@ -28,10 +28,12 @@ export default {
     background-color: lightblue;
     border-radius: 20px;
     color: white;
+    height: 100%;
 
 }
 
 img{
     border: 4px solid white;
+    max-width: 80%;
 }
 </style>
