@@ -21,7 +21,6 @@ export default {
 
 <template>
   <div class="container">
-    <h1>Ricky and Morty App</h1>
     <div class="row row-cols-lg-4 row-cols-md-3 row-cols-2 gap-4 justify-content-center">
       <div class="col" v-for="curChar in characterArray">
         <AppCard
@@ -39,8 +38,9 @@ export default {
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
 
-h1 {
-  margin: 30px 0px;
-  font-weight: bold;
+.container{
+  padding-top: $pt-120;
+  padding-bottom: $pb-60;
 }
+
 </style>

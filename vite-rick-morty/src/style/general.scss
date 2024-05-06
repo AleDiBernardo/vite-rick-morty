@@ -9,6 +9,9 @@
 body{
     background-color: lightgray;
     font-family: monospace;
+    background: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc),
+                linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
+    background-size: 50px 50px;
 }
 
 .container {
