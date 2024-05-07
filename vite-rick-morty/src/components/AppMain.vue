@@ -1,18 +1,13 @@
 <script>
-import axios from "axios";
+import {store} from "../store";
 import AppCard from "./AppCard.vue";
 export default {
   data() {
     return {
-      characterArray: [],
+      store
     };
   },
-  created() {
-    axios.get("https://rickandmortyapi.com/api/character").then((resp) => {
-      this.characterArray = resp.data.results;
-      console.log(this.characterArray);
-    });
-  },
+
   components: {
     AppCard,
   },
@@ -22,7 +17,7 @@ export default {
 <template>
   <div class="container">
     <div class="row row-cols-lg-4 row-cols-md-3 row-cols-2 gap-4 justify-content-center">
-      <div class="col" v-for="curChar in characterArray">
+      <div class="col" v-for="curChar in store.charList">
         <AppCard
           :cardImg="curChar.image"
           :cardName="curChar.name"
@@ -39,7 +34,7 @@ export default {
 @use "../style/partials/mixins" as *;
 
 .container{
-  padding-top: $pt-120;
+  padding-top: $pt-40;
   padding-bottom: $pb-60;
 }
 

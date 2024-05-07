@@ -1,10 +1,18 @@
 <script>
-export default {};
+import AppSearch from "./AppSearch.vue";
+
+export default {
+  components: {
+    AppSearch,
+  },
+};
 </script>
 
 <template>
-  <header class="d-flex justify-content-center align-items-center">
-    <h1>Ricky and Morty App</h1>
+  <header class="d-flex flex-column justify-content-center align-items-center">
+    <div>
+      <h1>Ricky and Morty App</h1>
+    </div>
   </header>
 </template>
 
@@ -14,18 +22,22 @@ export default {};
 
 header {
   padding: 20px;
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 0;
+  // position: fixed;
+  // width: 100%;
+  // left: 0;
+  // top: 0;
   // transform: translate(-50%);
 
-  h1 {
+  div {
     background-color: lightcoral;
     border-radius: 20px;
-    padding: 20px 15px;
+    padding: 10px;
     color: white;
-    font-weight: bold;
+
+    h1 {
+      font-weight: bold;
+      margin: 0;
+    }
   }
 }
 </style>
